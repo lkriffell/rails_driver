@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.4.1'
 gem 'faraday'
 gem 'figaro'
+gem 'yarn'
 
 group :development, :test do
   gem 'webdrivers'
