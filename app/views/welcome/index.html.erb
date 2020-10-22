@@ -7,6 +7,11 @@ table {
   margin-right: auto;
 }
 
+.buttonto {
+  background-color: #C9E5F1;
+}
+
+
 td, th {
   border: 1px solid black;
   text-align: left;
@@ -18,9 +23,10 @@ h3 {
 }
 
 tr:nth-child(even) {
-  background-color: #A9C2CD;
+  background-color: aliceblue;
 }
 </style>
+
 <br><h2>Note: When using the 'Try Me!' button, you may have to resend the url if the page cannot be found or if data is showing as null</h2><br>
 <br><h3>CRUD Endpoints: Items</h3><br>
 <table>
@@ -32,12 +38,12 @@ tr:nth-child(even) {
   <tr>
     <td>get '/api/v1/items'</td>
     <td>responds with all items currently in the database</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items', {class: "buttonto"} %></td>
   </tr>
   <tr>
     <td>get '/api/v1/items/:id'</td>
     <td>responds with one item based on it's id</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/5' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/5', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>post 'api/v1/items'</td>
@@ -65,12 +71,12 @@ tr:nth-child(even) {
   <tr>
     <td>get '/api/v1/merchants'</td>
     <td>responds with all merchants currently in the database</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>get '/api/v1/merchants/:id'</td>
     <td>responds with one merchant based on it's id</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/25' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/25', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>post 'api/v1/merchants'</td>
@@ -98,7 +104,7 @@ tr:nth-child(even) {
   <tr>
     <td>get '/api/v1/items/:id/merchant'</td>
     <td>responds with the merchant that sells the item with that id</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/25/merchant' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/25/merchant', {class: "buttonto"}  %></td>
   </tr>
 </table>
 <br><h3>Relation Endpoints: Merchants</h3><br>
@@ -111,7 +117,7 @@ tr:nth-child(even) {
   <tr>
     <td>get '/api/v1/merchants/:id/items'</td>
     <td>responds with a list of items sold by the merchant with that id</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/7/items' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/7/items', {class: "buttonto"}  %></td>
   </tr>
 </table>
 <br><h3>Search Endpoints: Items</h3><br>
@@ -124,12 +130,12 @@ tr:nth-child(even) {
   <tr>
     <td>get 'api/v1/items/find?:attribute=:value'</td>
     <td>responds with the item that has the same or similar :value for the specified :attribute</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/find?name=que' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/find?name=que', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>get 'api/v1/items/find_all?:attribute=:value'</td>
     <td>responds with all items that have the same or similar :value for the specified :attribute</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/find_all?name=que' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/items/find_all?name=que', {class: "buttonto"}  %></td>
   </tr>
 </table>
 <br><h3>Search Endpoints: Merchants</h3><br>
@@ -142,12 +148,12 @@ tr:nth-child(even) {
   <tr>
     <td>get 'api/v1/merchants/find?name=Als+Toy+Barn'</td>
     <td>responds with the merchant that has the same or similar :value for the specified</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/find?name=con' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/find?name=con', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>get 'api/v1/merchants/find_all?name=barn'</td>
     <td>responds with all merchants that have the same or similar :value for the specified :attribute</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/find_all?name=chr' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/find_all?name=chr', {class: "buttonto"}  %></td>
   </tr>
 </table>
 <br><h3>Business Endpoints:</h3><br>
@@ -160,21 +166,21 @@ tr:nth-child(even) {
   <tr>
     <td>get 'api/v1/merchants/most_revenue?quantity=2'</td>
     <td>responds with a list of quantity size based on the merchants with the most revenue</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/most_revenue?quantity=2' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/most_revenue?quantity=2', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>get 'api/v1/merchants/most_items?quantity=2'</td>
     <td>responds with a list of quantity size based on the merchants with the most items succsessfully sold</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/most_items?quantity=2' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/most_items?quantity=2', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>get 'api/v1/revenue?start=2012-03-09&end=2012-03-24'</td>
     <td>responds with the total revenue earned by all merchants within the dates specified</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/revenue?start=2012-03-09&end=2012-03-24' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/revenue?start=2012-03-09&end=2012-03-24', {class: "buttonto"}  %></td>
   </tr>
   <tr>
     <td>get 'api/v1/merchants/:id/revenue'</td>
     <td>responds with the total revenue of one merchant based on the id</td>
-    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/5/revenue' %></td>
+    <td><%= button_to 'Try Me!', 'https://rails-engine-lr.herokuapp.com/api/v1/merchants/5/revenue', {class: "buttonto"}  %></td>
   </tr>
 </table>
